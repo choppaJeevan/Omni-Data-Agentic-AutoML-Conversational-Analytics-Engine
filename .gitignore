@@ -5,4 +5,4 @@ __pycache__/
 *$py.class
 catboost_info/
 .DS_Store
-resume.log
+.txt
