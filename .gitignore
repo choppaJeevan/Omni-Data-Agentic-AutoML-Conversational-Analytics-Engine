@@ -1,0 +1,8 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+catboost_info/
+.DS_Store
+resume.log

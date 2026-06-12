@@ -1,0 +1,302 @@
+{
+  "csv_path": "C:\\Users\\jeeva\\OneDrive\\Desktop\\C_projects\\Projects\\agentic_data_analysis\\Telco-Customer-Churn.csv",
+  "residual_plot_path": "residual_plot.png",
+  "target_column": "Churn",
+  "problem_type": "classification",
+  "metadata_summary": {
+    "shape": {
+      "rows": 7043,
+      "columns": 21
+    },
+    "columns": {
+      "customerID": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 7043
+      },
+      "gender": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "Female",
+          "Male"
+        ]
+      },
+      "SeniorCitizen": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "0",
+          "1"
+        ]
+      },
+      "Partner": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "Yes",
+          "No"
+        ]
+      },
+      "Dependents": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "No",
+          "Yes"
+        ]
+      },
+      "tenure": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 73
+      },
+      "PhoneService": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "No",
+          "Yes"
+        ]
+      },
+      "MultipleLines": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No phone service",
+          "No",
+          "Yes"
+        ]
+      },
+      "InternetService": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "DSL",
+          "Fiber optic",
+          "No"
+        ]
+      },
+      "OnlineSecurity": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "OnlineBackup": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "Yes",
+          "No",
+          "No internet service"
+        ]
+      },
+      "DeviceProtection": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "TechSupport": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "StreamingTV": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "StreamingMovies": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "Contract": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "Month-to-month",
+          "One year",
+          "Two year"
+        ]
+      },
+      "PaperlessBilling": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "Yes",
+          "No"
+        ]
+      },
+      "PaymentMethod": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 4,
+        "sample_values": [
+          "Electronic check",
+          "Mailed check",
+          "Bank transfer (automatic)",
+          "Credit card (automatic)"
+        ]
+      },
+      "MonthlyCharges": {
+        "data_type": "float64",
+        "missing_values": 0,
+        "cardinality": 1585
+      },
+      "TotalCharges": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 6531
+      },
+      "Churn": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "No",
+          "Yes"
+        ]
+      }
+    }
+  },
+  "chosen_model_family": "TREE",
+  "outliers_detected": false,
+  "regression_metrics": {},
+  "classification_benchmarks": {
+    "linear_baseline_f1": 0.723412325879048,
+    "tree_challenger_f1": 0.7270062445008757,
+    "delta": 0.003593918621827674,
+    "feature_importances": {
+      "tenure": 0.22607585902791336,
+      "MonthlyCharges": 0.20005385926697264,
+      "Contract_Two year": 0.06851784488859367,
+      "InternetService_Fiber optic": 0.05244524891245208,
+      "PaymentMethod_Electronic check": 0.038854524469130104,
+      "Contract_One year": 0.034858109945268154,
+      "gender_Male": 0.031130634555444677,
+      "TechSupport_Yes": 0.029000678272752788,
+      "OnlineSecurity_Yes": 0.028215624287578175,
+      "PaperlessBilling_Yes": 0.027739562925222536,
+      "Partner_Yes": 0.025774859432401175,
+      "OnlineBackup_Yes": 0.024878763738858372,
+      "Dependents_Yes": 0.022304632157798453,
+      "DeviceProtection_Yes": 0.021438426856900127,
+      "MultipleLines_Yes": 0.021060387882139875,
+      "SeniorCitizen": 0.02101967299922819,
+      "StreamingTV_Yes": 0.01862143724017497,
+      "StreamingMovies_Yes": 0.018304446663464036,
+      "PaymentMethod_Credit card (automatic)": 0.016828922232131,
+      "PaymentMethod_Mailed check": 0.014594719870238517,
+      "InternetService_No": 0.011238408696066566,
+      "DeviceProtection_No internet service": 0.00882462854037839,
+      "StreamingMovies_No internet service": 0.007533271955659213,
+      "StreamingTV_No internet service": 0.00629979535498882,
+      "PhoneService_Yes": 0.005205167339952111,
+      "OnlineSecurity_No internet service": 0.004978236178806539,
+      "OnlineBackup_No internet service": 0.004899978153328325,
+      "MultipleLines_No phone service": 0.004711835982007489,
+      "TechSupport_No internet service": 0.004590462174149711
+    }
+  },
+  "final_model_metrics": {
+    "model_type": "CatBoost",
+    "accuracy": 0.797,
+    "macro_f1": 0.7217,
+    "test_samples": 1409,
+    "train_samples": 5634
+  },
+  "prediction_output_path": "reports/Telco-Customer-Churn_predictions_output.csv",
+  "data_sample_context": null,
+  "sandbox_execution_log": "Attempt 2 succeeded.\nLogs:\nTop 3 most correlated pairs:\nMultipleLines_No phone service and PhoneService_Yes: -0.9999999999999998\nInternetService_Fiber optic and MonthlyCharges: 0.7876157408547396\nInternetService_No and MonthlyCharges: -0.7619831354433257\nOnlineSecurity_No internet service and MonthlyCharges: -0.7619831354433257\nOnlineSecurity_No internet service and InternetService_No: 1.0\nOnlineBackup_No internet service and MonthlyCharges: -0.7619831354433257\nOnlineBackup_No internet service and InternetService_No: 1.0\nOnlineBackup_No internet service and OnlineSecurity_No internet service: 1.0\nDeviceProtection_No internet service and MonthlyCharges: -0.7619831354433257\nDeviceProtection_No internet service and InternetService_No: 1.0\nDeviceProtection_No internet service and OnlineSecurity_No internet service: 1.0\nDeviceProtection_No internet service and OnlineBackup_No internet service: 1.0\nTechSupport_No internet service and MonthlyCharges: -0.7619831354433257\nTechSupport_No internet service and InternetService_No: 1.0\nTechSupport_No internet service and OnlineSecurity_No internet service: 1.0\nTechSupport_No internet service and OnlineBackup_No internet service: 1.0\nTechSupport_No internet service and DeviceProtection_No internet service: 1.0\nStreamingTV_No internet service and MonthlyCharges: -0.7619831354433257\nStreamingTV_No internet service and InternetService_No: 1.0\nStreamingTV_No internet service and OnlineSecurity_No internet service: 1.0\nStreamingTV_No internet service and OnlineBackup_No internet service: 1.0\nStreamingTV_No internet service and DeviceProtection_No internet service: 1.0\nStreamingTV_No internet service and TechSupport_No internet service: 1.0\nStreamingMovies_No internet service and MonthlyCharges: -0.7619831354433257\nStreamingMovies_No internet service and InternetService_No: 1.0\nStreamingMovies_No internet service and OnlineSecurity_No internet service: 1.0\nStreamingMovies_No internet service and OnlineBackup_No internet service: 1.0\nStreamingMovies_No internet service and DeviceProtection_No internet service: 1.0\nStreamingMovies_No internet service and TechSupport_No internet service: 1.0\nStreamingMovies_No internet service and StreamingTV_No internet service: 1.0\nShape of X: (5634, 29)\nBasic statistics of X:\n       SeniorCitizen       tenure  ...  PaymentMethod_Electronic check  PaymentMethod_Mailed check\ncount    5634.000000  5634.000000  ...                     5634.000000                 5634.000000\nmean        0.163294    32.485091  ...                        0.335641                    0.228257\nstd         0.369667    24.568744  ...                        0.472256                    0.419746\nmin         0.000000     0.000000  ...                        0.000000                    0.000000\n25%         0.000000     9.000000  ...                        0.000000                    0.000000\n50%         0.000000    29.000000  ...                        0.000000                    0.000000\n75%         0.000000    55.000000  ...                        1.000000                    0.000000\nmax         1.000000    72.000000  ...                        1.000000                    1.000000\n\n[8 rows x 29 columns]\n\nMetrics: {'Correlation Matrix':                                        SeniorCitizen  ...  PaymentMethod_Mailed check\nSeniorCitizen                               1.000000  ...                   -0.151017\ntenure                                      0.016980  ...                   -0.237056\nMonthlyCharges                              0.220376  ...                   -0.381064\ngender_Male                                 0.007095  ...                    0.012981\nPartner_Yes                                 0.015729  ...                   -0.100625\nDependents_Yes                             -0.213300  ...                    0.055251\nPhoneService_Yes                            0.008483  ...                   -0.001987\nMultipleLines_No phone service             -0.008483  ...                    0.001987\nMultipleLines_Yes                           0.140617  ...                   -0.230636\nInternetService_Fiber optic                 0.252961  ...                   -0.310705\nInternetService_No                         -0.182473  ...                    0.326976\nOnlineSecurity_No internet service         -0.182473  ...                    0.326976\nOnlineSecurity_Yes                         -0.025476  ...                   -0.073269\nOnlineBackup_No internet service           -0.182473  ...                    0.326976\nOnlineBackup_Yes                            0.069420  ...                   -0.182953\nDeviceProtection_No internet service       -0.182473  ...                    0.326976\nDeviceProtection_Yes                        0.060479  ...                   -0.195299\nTechSupport_No internet service            -0.182473  ...                    0.326976\nTechSupport_Yes                            -0.062554  ...                   -0.079371\nStreamingTV_No internet service            -0.182473  ...                    0.326976\nStreamingTV_Yes                             0.113969  ...                   -0.253933\nStreamingMovies_No internet service        -0.182473  ...                    0.326976\nStreamingMovies_Yes                         0.116375  ...                   -0.247727\nContract_One year                          -0.043220  ...                   -0.001818\nContract_Two year                          -0.118882  ...                   -0.007118\nPaperlessBilling_Yes                        0.157326  ...                   -0.202434\nPaymentMethod_Credit card (automatic)      -0.030463  ...                   -0.284869\nPaymentMethod_Electronic check              0.175119  ...                   -0.386555\nPaymentMethod_Mailed check                 -0.151017  ...                    1.000000\n\n[29 rows x 29 columns], 'X Shape': (5634, 29), 'X Basic Statistics':        SeniorCitizen       tenure  ...  PaymentMethod_Electronic check  PaymentMethod_Mailed check\ncount    5634.000000  5634.000000  ...                     5634.000000                 5634.000000\nmean        0.163294    32.485091  ...                        0.335641                    0.228257\nstd         0.369667    24.568744  ...                        0.472256                    0.419746\nmin         0.000000     0.000000  ...                        0.000000                    0.000000\n25%         0.000000     9.000000  ...                        0.000000                    0.000000\n50%         0.000000    29.000000  ...                        0.000000                    0.000000\n75%         0.000000    55.000000  ...                        1.000000                    0.000000\nmax         1.000000    72.000000  ...                        1.000000                    1.000000\n\n[8 rows x 29 columns]}",
+  "critic_validation_report": {
+    "train_score": 0.834,
+    "test_score": 0.797,
+    "score_gap": 0.037,
+    "verdict": "HEALTHY",
+    "classification_report": {
+      "0": {
+        "precision": 0.8383017163504969,
+        "recall": 0.8966183574879227,
+        "f1-score": 0.8664799253034547,
+        "support": 1035.0
+      },
+      "1": {
+        "precision": 0.6456953642384106,
+        "recall": 0.5213903743315508,
+        "f1-score": 0.5769230769230769,
+        "support": 374.0
+      },
+      "accuracy": 0.7970191625266146,
+      "macro avg": {
+        "precision": 0.7419985402944538,
+        "recall": 0.7090043659097367,
+        "f1-score": 0.7217015011132658,
+        "support": 1409.0
+      },
+      "weighted avg": {
+        "precision": 0.7871769642639672,
+        "recall": 0.7970191625266146,
+        "f1-score": 0.7896209747752353,
+        "support": 1409.0
+      }
+    },
+    "roc_auc": 0.8424,
+    "average_precision": 0.6575,
+    "llm_interpretation": "Based on the diagnostic validation results, I assess the model's health as HEALTHY. The train score of 0.834 and test score of 0.797 indicate that the model generalizes well, with a reasonable score gap of 0.037. This suggests that the model is not overfitting or underfitting, and its performance is robust across both training and testing datasets.\n\nNo further action is required at this time; the model appears to be performing well and can be considered ready for deployment."
+  },
+  "critic_flags": [],
+  "critic_plot_paths": {
+    "confusion_matrix": "plots/dataset_confusion_matrix.png",
+    "roc_auc_curve": "plots/dataset_roc_auc_curve.png",
+    "precision_recall_curve": "plots/dataset_precision_recall_curve.png",
+    "learning_curve": "plots/dataset_learning_curve.png"
+  },
+  "execution_history": [
+    "data_scout",
+    "target_inference",
+    "global_preprocessor",
+    "classification_statistical_judge",
+    "optimizer_skipped",
+    "model_tournament_optimized",
+    "critic_validator",
+    "sandbox_code_generator",
+    "insight_synthesizer_reporter"
+  ],
+  "error_traceback": null
+}

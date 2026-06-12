@@ -1,0 +1,190 @@
+{
+  "csv_path": "C:\\Users\\jeeva\\Downloads\\Titanic-Dataset.csv",
+  "residual_plot_path": "residual_plot.png",
+  "target_column": "Survived",
+  "problem_type": "classification",
+  "metadata_summary": {
+    "shape": {
+      "rows": 891,
+      "columns": 12
+    },
+    "columns": {
+      "PassengerId": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 891
+      },
+      "Survived": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "0",
+          "1"
+        ]
+      },
+      "Pclass": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 3,
+        "sample_values": [
+          "3",
+          "1",
+          "2"
+        ]
+      },
+      "Name": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 891
+      },
+      "Sex": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 2,
+        "sample_values": [
+          "male",
+          "female"
+        ]
+      },
+      "Age": {
+        "data_type": "float64",
+        "missing_values": 177,
+        "cardinality": 88
+      },
+      "SibSp": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 7,
+        "sample_values": [
+          "1",
+          "0",
+          "3",
+          "4",
+          "2"
+        ]
+      },
+      "Parch": {
+        "data_type": "int64",
+        "missing_values": 0,
+        "cardinality": 7,
+        "sample_values": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "3"
+        ]
+      },
+      "Ticket": {
+        "data_type": "str",
+        "missing_values": 0,
+        "cardinality": 681
+      },
+      "Fare": {
+        "data_type": "float64",
+        "missing_values": 0,
+        "cardinality": 248
+      },
+      "Cabin": {
+        "data_type": "str",
+        "missing_values": 687,
+        "cardinality": 147
+      },
+      "Embarked": {
+        "data_type": "str",
+        "missing_values": 2,
+        "cardinality": 3,
+        "sample_values": [
+          "S",
+          "C",
+          "Q"
+        ]
+      }
+    }
+  },
+  "chosen_model_family": "TREE",
+  "outliers_detected": false,
+  "regression_metrics": {},
+  "classification_benchmarks": {
+    "linear_baseline_f1": 0.7799330621235683,
+    "tree_challenger_f1": 0.799494306365674,
+    "delta": 0.019561244242105702,
+    "feature_importances": {
+      "Fare": 0.2666457634292312,
+      "Sex_male": 0.24635636977309164,
+      "Age": 0.241911699555229,
+      "Pclass": 0.07165466511739536,
+      "Cabin_freq_enc": 0.05938433996976077,
+      "SibSp": 0.04439058574231746,
+      "Parch": 0.03485890751963801,
+      "Embarked_S": 0.02468670131245218,
+      "Embarked_Q": 0.010110967580884384
+    }
+  },
+  "final_model_metrics": {
+    "model_type": "CatBoost",
+    "accuracy": 0.7989,
+    "macro_f1": 0.7762,
+    "test_samples": 179,
+    "train_samples": 712
+  },
+  "prediction_output_path": "reports/Titanic-Dataset_predictions_output.csv",
+  "data_sample_context": null,
+  "sandbox_execution_log": "Attempt 1 succeeded.\nLogs:\nTop 3 most correlated pairs:\n         Pclass       Age     SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\nFare  -0.556540  0.104382  0.127011  ...       -0.472468   -0.111737   -0.202177\nParch  0.040467 -0.162256  0.392269  ...       -0.008412   -0.072073    0.063077\nSibSp  0.097900 -0.238338  1.000000  ...        0.057418   -0.010491    0.058442\n\n[3 rows x 9 columns]\n\nShape of X: (712, 9)\nBasic Statistics of X:\n            Pclass         Age       SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\ncount  712.000000  712.000000  712.000000  ...      712.000000  712.000000  712.000000\nmean     2.308989   29.556067    0.492978  ...        0.610241    0.077247    0.727528\nstd      0.833563   13.025273    1.060720  ...        0.322409    0.267171    0.445544\nmin      1.000000    0.420000    0.000000  ...        0.001404    0.000000    0.000000\n25%      2.000000   22.000000    0.000000  ...        0.780899    0.000000    0.000000\n50%      3.000000   28.500000    0.000000  ...        0.780899    0.000000    1.000000\n75%      3.000000   36.000000    1.000000  ...        0.780899    0.000000    1.000000\nmax      3.000000   80.000000    8.000000  ...        0.780899    1.000000    1.000000\n\n[8 rows x 9 columns]\n\nMetrics Output:\nCorrelation Matrix:                   Pclass       Age     SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\nPclass          1.000000 -0.320559  0.097900  ...        0.730567    0.214760    0.113399\nAge            -0.320559  1.000000 -0.238338  ...       -0.226182   -0.017009   -0.020308\nSibSp           0.097900 -0.238338  1.000000  ...        0.057418   -0.010491    0.058442\nParch           0.040467 -0.162256  0.392269  ...       -0.008412   -0.072073    0.063077\nFare           -0.556540  0.104382  0.127011  ...       -0.472468   -0.111737   -0.202177\nSex_male        0.145052  0.075511 -0.100430  ...        0.152899   -0.081956    0.138836\nCabin_freq_enc  0.730567 -0.226182  0.057418  ...        1.000000    0.127849    0.141137\nEmbarked_Q      0.214760 -0.017009 -0.010491  ...        0.127849    1.000000   -0.472784\nEmbarked_S      0.113399 -0.020308  0.058442  ...        0.141137   -0.472784    1.000000\n\n[9 rows x 9 columns]\nX Shape: (712, 9)\nX Basic Statistics:            Pclass         Age       SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\ncount  712.000000  712.000000  712.000000  ...      712.000000  712.000000  712.000000\nmean     2.308989   29.556067    0.492978  ...        0.610241    0.077247    0.727528\nstd      0.833563   13.025273    1.060720  ...        0.322409    0.267171    0.445544\nmin      1.000000    0.420000    0.000000  ...        0.001404    0.000000    0.000000\n25%      2.000000   22.000000    0.000000  ...        0.780899    0.000000    0.000000\n50%      3.000000   28.500000    0.000000  ...        0.780899    0.000000    1.000000\n75%      3.000000   36.000000    1.000000  ...        0.780899    0.000000    1.000000\nmax      3.000000   80.000000    8.000000  ...        0.780899    1.000000    1.000000\n\n[8 rows x 9 columns]\n\nMetrics: {'Correlation Matrix':                   Pclass       Age     SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\nPclass          1.000000 -0.320559  0.097900  ...        0.730567    0.214760    0.113399\nAge            -0.320559  1.000000 -0.238338  ...       -0.226182   -0.017009   -0.020308\nSibSp           0.097900 -0.238338  1.000000  ...        0.057418   -0.010491    0.058442\nParch           0.040467 -0.162256  0.392269  ...       -0.008412   -0.072073    0.063077\nFare           -0.556540  0.104382  0.127011  ...       -0.472468   -0.111737   -0.202177\nSex_male        0.145052  0.075511 -0.100430  ...        0.152899   -0.081956    0.138836\nCabin_freq_enc  0.730567 -0.226182  0.057418  ...        1.000000    0.127849    0.141137\nEmbarked_Q      0.214760 -0.017009 -0.010491  ...        0.127849    1.000000   -0.472784\nEmbarked_S      0.113399 -0.020308  0.058442  ...        0.141137   -0.472784    1.000000\n\n[9 rows x 9 columns], 'X Shape': (712, 9), 'X Basic Statistics':            Pclass         Age       SibSp  ...  Cabin_freq_enc  Embarked_Q  Embarked_S\ncount  712.000000  712.000000  712.000000  ...      712.000000  712.000000  712.000000\nmean     2.308989   29.556067    0.492978  ...        0.610241    0.077247    0.727528\nstd      0.833563   13.025273    1.060720  ...        0.322409    0.267171    0.445544\nmin      1.000000    0.420000    0.000000  ...        0.001404    0.000000    0.000000\n25%      2.000000   22.000000    0.000000  ...        0.780899    0.000000    0.000000\n50%      3.000000   28.500000    0.000000  ...        0.780899    0.000000    1.000000\n75%      3.000000   36.000000    1.000000  ...        0.780899    0.000000    1.000000\nmax      3.000000   80.000000    8.000000  ...        0.780899    1.000000    1.000000\n\n[8 rows x 9 columns]}",
+  "critic_validation_report": {
+    "train_score": 0.8722,
+    "test_score": 0.7989,
+    "score_gap": 0.0733,
+    "verdict": "HEALTHY",
+    "classification_report": {
+      "0": {
+        "precision": 0.7936507936507936,
+        "recall": 0.9090909090909091,
+        "f1-score": 0.847457627118644,
+        "support": 110.0
+      },
+      "1": {
+        "precision": 0.8113207547169812,
+        "recall": 0.6231884057971014,
+        "f1-score": 0.7049180327868853,
+        "support": 69.0
+      },
+      "accuracy": 0.7988826815642458,
+      "macro avg": {
+        "precision": 0.8024857741838873,
+        "recall": 0.7661396574440053,
+        "f1-score": 0.7761878299527647,
+        "support": 179.0
+      },
+      "weighted avg": {
+        "precision": 0.8004621194249105,
+        "recall": 0.7988826815642458,
+        "f1-score": 0.792512196901374,
+        "support": 179.0
+      }
+    },
+    "roc_auc": 0.8362,
+    "average_precision": 0.8257,
+    "llm_interpretation": "Based on the diagnostic validation results, I assess the model's health as HEALTHY. The train score of 0.8722 and test score of 0.7989 indicate that the model generalizes well, with a reasonable train-test gap of 0.0733. This suggests that the model is not overfitting or underfitting, and it's likely to perform well on unseen data.\n\nNo further action is required at this time, as the model appears to be in good health."
+  },
+  "critic_flags": [],
+  "critic_plot_paths": {
+    "confusion_matrix": "plots/dataset_confusion_matrix.png",
+    "roc_auc_curve": "plots/dataset_roc_auc_curve.png",
+    "precision_recall_curve": "plots/dataset_precision_recall_curve.png",
+    "learning_curve": "plots/dataset_learning_curve.png"
+  },
+  "execution_history": [
+    "data_scout",
+    "target_inference",
+    "global_preprocessor",
+    "classification_statistical_judge",
+    "optimizer_skipped",
+    "model_tournament_optimized",
+    "critic_validator",
+    "sandbox_code_generator",
+    "insight_synthesizer_reporter"
+  ],
+  "error_traceback": null
+}
