@@ -74,7 +74,7 @@ A single Pydantic model (`AnalystGraphState`) is the system's central nervous sy
 | Dataset | Task | Winning Model | Test Score | Health Verdict |
 |---|---|---|---|---|
 | Telco Customer Churn | Classification | CatBoost | 0.797 accuracy | HEALTHY (gap 0.037) |
-| Titanic | Classification | Tree family | — | HEALTHY |
+| Titanic | Classification | Tree family | 0.835 accuracy | HEALTHY |
 
 ## File Map
 
