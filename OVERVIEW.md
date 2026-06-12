@@ -1,7 +1,5 @@
 # ADA — Agentic Data Analysis: Project Overview
 
-![ADA Architecture Flowchart](ADA%20flowchart.png)
-
 ## What is ADA?
 
 ADA (Agentic Data Analysis) is a **fully local, autonomous AI data scientist**. You hand it a raw CSV file, and it independently profiles the data, infers the prediction target, cleans and encodes the features, decides which family of machine learning models fits the data's geometry, runs a hyperparameter-tuned model tournament, audits its own winner for overfitting and data leakage, writes its own exploratory analysis code, and compiles a professional executive summary report — all without a single API call leaving your machine.
@@ -18,7 +16,7 @@ The architecture follows one core rule: **let the LLM decide, let deterministic 
 
 ## The Pipeline, Node by Node
 
-The flowchart above traces the full journey of a CSV through the system:
+The architecture flowchart (`ADA flowchart.png`, shown in the README) traces the full journey of a CSV through the system:
 
 ### 1. Data Scout
 Extracts a compact JSON metadata summary of the CSV — shape, dtypes, missing values, cardinality, sample values. This keeps a 100MB dataset down to a few KB of context so a local 8B-parameter LLM can reason about it without exhausting VRAM.
