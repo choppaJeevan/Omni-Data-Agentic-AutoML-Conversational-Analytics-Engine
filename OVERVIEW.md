@@ -16,7 +16,7 @@ The architecture follows one core rule: **let the LLM decide, let deterministic 
 
 ## The Pipeline, Node by Node
 
-The architecture flowchart (`ADA flowchart.png`, shown in the README) traces the full journey of a CSV through the system:
+The architecture flowchart (`ADA detailed flowchart.png`, shown in the README) traces the full journey of a CSV through the system:
 
 ### 1. Data Scout
 Extracts a compact JSON metadata summary of the CSV — shape, dtypes, missing values, cardinality, sample values. This keeps a 100MB dataset down to a few KB of context so a local 8B-parameter LLM can reason about it without exhausting VRAM.

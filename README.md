@@ -2,7 +2,7 @@
 
 > A fully local, autonomous AI data scientist. Drop in a CSV — get back a trained, validated, self-audited ML model and an executive report. Zero cloud. Zero API keys. 100% private.
 
-![ADA Architecture Flowchart](ADA%20flowchart.png)
+![ADA Architecture Flowchart](ADA%20detailed%20flowchart.png)
 
 ## Features
 
@@ -102,7 +102,7 @@ agentic_data_analysis/
 ├── engine_room.py        # Deterministic tools (Functions 1–6)
 ├── state_schema.py       # Pydantic central graph state
 ├── sandbox_executor.py   # Isolated runtime for AI-generated code
-├── ADA flowchart.png     # Full architecture flowchart
+├── ADA detailed flowchart.png     # Full architecture flowchart
 ├── reports/              # Generated reports, predictions, scripts, caches
 └── plots/                # Diagnostic visuals
 ```
